@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">StoreView</string>
+    <string name="go_to_register">Registrate</string>
+    <string name="go_to_log_in">Ingresar</string>
+    <string name="email">E-mail</string>
+    <string name="nick">Usuario</string>
+    <string name="nick_user">Usuario o E-mail</string>
+    <string name="password">Contraseña</string>
+    <string name="full_name">Nombre Completo</string>
+    <string name="phone_number">Número Télefonico</string>
+    <string name="confirm_password">Confirme contraseña</string>
+</resources>
