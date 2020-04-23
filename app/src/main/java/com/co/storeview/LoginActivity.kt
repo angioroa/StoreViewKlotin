@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         val myPassText = findViewById<EditText>(R.id.passText)
         val myErrorText = findViewById<TextView>(R.id.textError)
         if (myTextEmail.text.toString() == "" || myPassText.text.toString() == "") {
+            myErrorText.visibility = View.VISIBLE
 
         }
         else {
