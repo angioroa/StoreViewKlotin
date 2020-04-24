@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/shopCar"
-        android:layout_width="137dp"
+        android:layout_width="135dp"
         android:layout_height="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
