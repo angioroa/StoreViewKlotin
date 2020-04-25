@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             myErrorText.visibility = View.VISIBLE
         }
         else {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
     }

@@ -14,11 +14,12 @@
         android:layout_width="257dp"
         android:layout_height="271dp"
         android:layout_marginBottom="116dp"
+        android:background="@color/YellowFire"
         android:gravity="center"
-        android:background="YellowFire"
         android:text="AQUI VA EL MAPA"
         app:layout_constraintBottom_toTopOf="@+id/button6"
-        tools:layout_editor_absoluteX="93dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText"
