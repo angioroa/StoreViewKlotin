@@ -17,8 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/Avatar"
-        tools:srcCompat="@drawable/Avatar" />
+        app:srcCompat="@drawable/avatar"
+        tools:srcCompat="@drawable/avatar" />
 
     <EditText
         android:id="@+id/nameText"

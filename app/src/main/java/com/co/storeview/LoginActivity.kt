@@ -19,12 +19,12 @@ class LoginActivity : AppCompatActivity() {
     fun logIn(view: View) {
         val myTextEmail = findViewById<EditText>(R.id.textEmail)
         val myPassText = findViewById<EditText>(R.id.passText)
-        val myErrorText = findViewById<TextView>(R.id.textError)
+
         if (myTextEmail.text.toString() == "" || myPassText.text.toString() == "") {
-            myErrorText.visibility = View.VISIBLE
+
         }
         else {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
