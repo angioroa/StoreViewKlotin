@@ -1,0 +1,93 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlueBack"
+    tools:context=".Fragmentos.MapFragment"
+    >
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="257dp"
+        android:layout_height="271dp"
+        android:layout_marginBottom="116dp"
+        android:background="@color/YellowFire"
+        android:gravity="center"
+        android:text="AQUI VA EL MAPA"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="402dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/YellowFire"
+        android:ems="10"
+        android:hint="Buscar"
+        android:inputType="text"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/YellowFire"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="395dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/YellowFire"
+        android:text="Buscar en el mapa"
+        android:textColor="@color/BlueBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <SearchView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="376dp"
+        android:layout_marginLeft="376dp"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/YellowFire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:background="@color/BlueBack"
+        android:text="Ordenar ↑↓"
+        android:textColor="@color/YellowFire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="125dp"
+        android:layout_height="25dp"
+        android:background="@color/YellowFire"
+        android:text="Regresar"
+        android:textColor="@color/BlueBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="640dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
