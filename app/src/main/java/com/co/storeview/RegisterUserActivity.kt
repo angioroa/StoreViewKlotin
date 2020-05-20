@@ -5,7 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.TextView
+
+import android.widget.ArrayAdapter
+import android.widget.SpinnerAdapter
+import android.widget.Toast
+import androidx.room.Room
+import com.co.storeview.data.AppDatabase
+import com.co.storeview.data.entities.Register
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
+
 
 class RegisterUserActivity : AppCompatActivity() {
 
@@ -29,4 +38,9 @@ class RegisterUserActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
+     var db = Room.databaseBuilder(
+    applicationContext,
+    AppDatabase::class.java, "database-name"
+    ).build()
+
 }
