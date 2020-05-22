@@ -3,7 +3,7 @@ import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 
-
+@Entity
 data class Register (
     @ColumnInfo(name = "Usuario") var Usuario: String?,
     @ColumnInfo(name = "Nombre") var Nombre: String?,

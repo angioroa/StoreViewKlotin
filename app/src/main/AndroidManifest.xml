@@ -9,8 +9,6 @@
         android:roundIcon="@drawable/ic_launch_black_24dp"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
-
         <activity android:name=".RegisterUserActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">

@@ -7,6 +7,9 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.Toast
+import androidx.navigation.findNavController
+import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -22,15 +25,16 @@ class LoginActivity : AppCompatActivity() {
 
         if (myTextEmail.text.toString() == "" || myPassText.text.toString() == "") {
 
-        }
-        else {
+        } else {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
+        fun register(view:View) {
+            signUpButton.setOnClickListener {
+                val intento1 = Intent(this, RegisterUserActivity::class.java)
+                startActivity(intento1)
+            }
 
-    fun register(view:View){
-        val intent = Intent(this, RegisterUserActivity::class.java)
-        startActivity(intent)
-    }
+        }
 }

@@ -6,7 +6,8 @@ import com.co.storeview.data.entities.Register
 interface RegisterDao {
 
     @Query("SELECT * FROM Register WHERE Usuario = :usuario")
-    fun findByName(usuario: String): Usuario
+    fun findByName(usuario: String): Register
 
-
+    @Insert
+    fun insert(register: Register)
 }

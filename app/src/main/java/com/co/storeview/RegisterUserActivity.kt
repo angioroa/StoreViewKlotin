@@ -12,12 +12,15 @@ import android.widget.Toast
 import androidx.room.Room
 import com.co.storeview.data.AppDatabase
 import com.co.storeview.data.entities.Register
+import kotlinx.android.synthetic.main.activity_register_user.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
 
 class RegisterUserActivity : AppCompatActivity() {
 
+    var register: Register? = null
+    lateinit var db:AppDatabase
     private lateinit var txtName: EditText;
     private lateinit var txtNick: EditText;
     private lateinit var txtEmail: EditText;
@@ -29,6 +32,12 @@ class RegisterUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_user)
 
+        var db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "database-name"
+        ).build()
+
+
     }
     fun register(view:View){
         val intent = Intent(this, MainActivity::class.java)
@@ -38,9 +47,28 @@ class RegisterUserActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
-     var db = Room.databaseBuilder(
-    applicationContext,
-    AppDatabase::class.java, "database-name"
-    ).build()
 
+    fun save(view: View){
+        var usuario = userText.text.toString()
+        var nombre = nameText.text.toString()
+        var email = emailText.text.toString()
+        var contraseña = passTextIn.text.toString()
+        var telefono = numberPhoneText.text.toString()
+        if(!usuario.isNullOrEmpty()&& nombre != null){
+
+            insertUser(usuario, nombre, email, contraseña, telefono)
+        }
+        else{
+                Toast.makeText(this, "El usuario es obligatorio", Toast.LENGTH_SHORT).show()
+        }
+    }
+    fun insertUser(usuario: String, nombre: String, email: String, contraseña: String, telefono: String){
+        var newUser = Register(usuario, nombre, email, contraseña, telefono)
+        doAsync {
+            db.registerDao().insert(newUser)
+            uiThread {
+                finish()
+            }
+        }
+    }
 }
