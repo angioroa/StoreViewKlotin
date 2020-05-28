@@ -32,16 +32,12 @@ class RegisterUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_user)
 
-        var db = Room.databaseBuilder(
+        db = Room.databaseBuilder(
             applicationContext,
-            AppDatabase::class.java, "database-name"
+            AppDatabase::class.java, "database_name"
         ).build()
 
 
-    }
-    fun register(view:View){
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
     }
     fun login(view:View){
         val intent = Intent(this, LoginActivity::class.java)
@@ -65,9 +61,12 @@ class RegisterUserActivity : AppCompatActivity() {
     fun insertUser(usuario: String, nombre: String, email: String, contraseña: String, telefono: String){
         var newUser = Register(usuario, nombre, email, contraseña, telefono)
         doAsync {
-            db.registerDao().insert(newUser)
+            db.registerDao().insertAll(newUser)
             uiThread {
+                val intent = Intent(it, LoginActivity::class.java)
+                startActivity(intent)
                 finish()
+
             }
         }
     }

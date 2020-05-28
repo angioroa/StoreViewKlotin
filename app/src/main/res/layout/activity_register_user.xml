@@ -128,7 +128,7 @@
         android:layout_height="98dp"
         android:layout_marginBottom="92dp"
         android:background="@drawable/button_rounded"
-        android:onClick="register"
+        android:onClick="save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
